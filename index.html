@@ -29,9 +29,13 @@
   <link href="assets/css/style.css" rel="stylesheet">
 
 </head>
+<div id="loadingScreen">
+  <div class="loading-spinner"></div>
+  <p class="trr">Loading...<br><br> 7 days trail<hr> Purchase to have full control.</p>
+</div>
 
 <body>
-
+  <div id="landingPage" class="hidden">
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top d-flex align-items-center">
     <div class="container d-flex align-items-center">
@@ -842,8 +846,9 @@
           <div class="col-lg-4 col-md-6 footer-newsletter">
             <h4>Join Our Newsletter</h4>
             <p>What is going on inside</p>
-            <form action="index.html" method="post">
+            <form id="newsletterForm" action="index.html" method="post">
               <input type="email" name="email"><input type="submit" value="Subscribe">
+              <div id="formMessage"></div>
             </form>
           </div>
 
@@ -874,7 +879,7 @@
       </div>
     </div>
   </footer><!-- End Footer -->
-
+  </div>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
