@@ -320,3 +320,55 @@ document.getElementById('contactForm').addEventListener('submit', function(event
   // Open the WhatsApp link in a new window/tab
   window.open(whatsappLink, '_blank');
 });
+
+
+document.getElementById('newsletterForm').addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent the form from submitting the traditional way
+
+  const email = document.getElementById('email').value;
+
+  // Validate email address
+  if (!validateEmail(email)) {
+      document.getElementById('formMessage').innerText = 'Please enter a valid email address.';
+      return;
+  }
+
+  // Send the email data to the server
+  const data = { email: email };
+  fetch('/subscribe', {
+      method: 'POST',
+      headers: {
+          'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+  })
+  .then(response => {
+      if (response.ok) {
+          document.getElementById('formMessage').innerText = 'Thank you for subscribing!';
+      } else {
+          document.getElementById('formMessage').innerText = 'Failed to subscribe. Please try again.';
+      }
+  })
+  .catch(error => {
+      document.getElementById('formMessage').innerText = 'Failed to subscribe. Please try again.';
+  });
+});
+
+// Email validation function
+function validateEmail(email) {
+  const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return re.test(email);
+}
+
+
+// Function to hide the loading screen and show the landing page
+function hideLoadingScreen() {
+  document.getElementById('loadingScreen').style.display = 'none';
+  document.getElementById('landingPage').classList.remove('hidden');
+}
+
+// Listen for the window load event
+window.addEventListener('load', function() {
+  // Hide the loading screen when the window is fully loaded
+  setTimeout(hideLoadingScreen, 5000);
+});
