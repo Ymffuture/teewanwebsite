@@ -2128,3 +2128,58 @@ section {
   color: #fff;
   text-decoration: none;
 }
+
+/* Styling the loading screen */
+#loadingScreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 6px solid #011858;
+  border-top-color: #098be2;
+  border-radius: 50%;
+  animation: spin 2s linear infinite;
+}
+
+/* Loading spinner animation */
+@keyframes spin {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+  }
+}
+
+/* Hide content initially */
+.hidden {
+  display: none;
+}
+.trr{
+  animation: fade 2s ease-in infinite;
+}
+
+@keyframes fade {
+  0%{
+    opacity: .3;
+  }
+  50%{
+    opacity: .6;
+  }
+  100%{
+    opacity: 1;
+    color: #011858;
+  }
+  
+}
