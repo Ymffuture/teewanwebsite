@@ -372,28 +372,3 @@ window.addEventListener('load', function() {
   // Hide the loading screen when the window is fully loaded
   setTimeout(hideLoadingScreen, 5000);
 });
-
-
-const express = require('express');
-const app = express();
-app.use(express.json());
-
-// Array to simulate a database for subscribers
-let subscribers = [];
-
-// Endpoint to handle subscription requests
-app.post('/subscribe', (req, res) => {
-    const email = req.body.email;
-
-    // Add email to the list of subscribers (in a real app, use a database)
-    if (!subscribers.includes(email)) {
-        subscribers.push(email);
-        res.status(200).send('Subscribed successfully');
-    } else {
-        res.status(400).send('Already subscribed');
-    }
-});
-
-app.listen(3000, () => {
-    console.log('Server is running on port 3000');
-});
