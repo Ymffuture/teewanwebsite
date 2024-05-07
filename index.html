@@ -29,6 +29,7 @@
   <link href="assets/css/style.css" rel="stylesheet">
 
 </head>
+
 <div id="loadingScreen">
   <div class="loading-spinner"></div>
   <p class="trr"><img src="assets/img/icondd.png" width="200px"></p>
@@ -230,7 +231,7 @@
             </a>
           </li>
           <li class="nav-item col-3">
-            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-2">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-4">
                 <i class="ri-information-line"></i> <!-- An icon representing information, e.g. an info icon -->
                 <h4 class="d-none d-lg-block">Information</h4> <!-- Updated text to reflect information -->
             </a>
@@ -278,7 +279,7 @@
                   </p>
               </div>
               <div class="col-lg-6 order-1 order-lg-2 text-center">
-                  <img src="assets/img/WhatsApp Image 2024-04-30 at 21.26.15_1c63ac06.jpg" width="400px" alt="LearnIQ and TeeWan" class="img-fluid">
+                  <img src="assets/img/WhatsApp Image 2024-04-30 at 21.26.15_1c63ac06.jpg" width="400px" alt="LearnIQ and TeeWan" class="img-fluid border-lh">
               </div>
           </div>
       </div>
@@ -303,7 +304,27 @@
             </div>
         </div>
     </div>
-          
+    <div class="tab-pane" id="tab-4">
+      <div class="row">
+          <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+              <h3> infomation about: LearnIQ and TeeWan</h3>
+              <p>
+                  LearnIQ and TeeWan provide innovative educational solutions and resources tailored to your learning needs.
+              </p>
+              <ul>
+                  <li><i class="ri-check-double-line"></i> LearnIQ offers personalized learning experiences and interactive lessons.</li>
+                  <li><i class="ri-check-double-line"></i> TeeWan provides access to a variety of courses and online materials.</li>
+                  <li><i class="ri-check-double-line"></i> Both platforms offer expert support and guidance for students.</li>
+              </ul>
+              <p>
+                  Explore their offerings to take advantage of the best in education and skill development.
+              </p>
+          </div>
+          <div class="col-lg-6 order-1 order-lg-2 text-center">
+              <img src="assets/img/pixlr-image-generator-6634e29c98a6f0b05095cf66.png" width="400px" alt="LearnIQ and TeeWan" class="img-fluid border-lh">
+          </div>
+      </div>
+  </div>
 
       </div>
     </section><!-- End Tabs Section -->
@@ -418,7 +439,7 @@
 
               <div class="col-lg-4 col-md-6 event-item filter-inperson">
                 <div class="event-wrap">
-                    <img src="assets/img/Logo Maker 2024_04_30_07_16_03.png" class="img-fluid" alt="In-Person Workshop">
+                    <img src="assets/img/Logo Maker 2024_04_30_07_16_03.png" class="img-fluid" alt="In-Person">
                     <div class="event-info">
                         <h4>In-Person session: Mathematics lvl 5</h4>
                         <p>In-person</p>
@@ -838,11 +859,12 @@
           <div class="col-lg-2 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#hero">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#about">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#services">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a class="ink" href="#" onclick="toggleText3()">Terms of Use</a> <b> |</b></li>
+              <li><i class="bx bx-chevron-right"></i>  <a class="ink" href="#" onclick="toggleText2()" translate="yes">Privacy</a></li>
+              <li><i class="bx bx-chevron-right"></i>   <a class="ink" href="#" onclick="toggleText()" target="_self">Policy</a></li>
             </ul>
           </div>
 
@@ -850,18 +872,18 @@
             <h4>Our Services</h4>
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Subjets</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Online classes</li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#event">Online classes</li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Matric Content</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Applications</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Bursary Application</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="http://nsfas.co.za">Bursary Application</a></li>
             </ul>
           </div>
 
           <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Join Our Newsletter</h4>
-            <p>What is going on inside</p>
-            <form id="newsletterForm" action="index.html" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
+            <h4>Join Our Search</h4>
+            <p>Find the best Tutor for your subject.</p>
+            <form id="newsletterForm" action="emailto:futurekgomtso@gamil.com" method="post">
+              <input type="email" name="email"><input type="submit" value="Find a Tutor">
               <div id="formMessage"></div>
             </form>
           </div>
@@ -894,6 +916,7 @@
     </div>
   </footer><!-- End Footer -->
   </div>
+  
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
@@ -907,7 +930,114 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-
+  <div  id="hiddenText" class="policy">
+    <h1>Tutoring Services Policy</h1>
+    <a class="ink" href="#" onclick="toggleText()">Close</a>
+    <h2>1. Introduction:</h2>
+    <p>Our tutoring services aim to provide academic support and guidance to students in various subjects and topics. The following policy outlines the terms and conditions that govern our tutoring sessions.</p>
+  
+    <h2>2. Scope of Services:</h2>
+    <p>We offer tutoring sessions in subjects such as Math, Science, English, History, and more. Tutoring can be conducted in-person or online, based on the preference of the student and tutor availability. Sessions may cover homework help, exam preparation, concept clarification, and skill development.</p>
+  
+    <h2>3. Scheduling:</h2>
+    <p>Students can schedule tutoring sessions based on availability and subject to tutor availability. Sessions are typically scheduled in advance to ensure adequate preparation time for both the student and the tutor. Any changes or cancellations to scheduled sessions must be communicated at least 24 hours in advance.</p>
+  
+    <h2>4. Fees and Payment:</h2>
+    <p>Tutoring fees are determined based on the duration of the session and the subject matter. Payment is typically due at the time of booking or before the start of the session. We accept various payment methods, including cash, credit/debit cards, and online payment platforms.</p>
+  
+    <h2>5. Conduct and Expectations:</h2>
+    <p>Both tutors and students are expected to conduct themselves professionally and respectfully during tutoring sessions. Tutors will provide personalized support and guidance tailored to the individual needs and learning styles of the students. Students are encouraged to actively participate in the sessions, ask questions, and communicate any challenges they may be facing.</p>
+  
+    <h2>6. Academic Integrity:</h2>
+    <p>We uphold the principles of academic integrity and do not condone any form of cheating or plagiarism. Tutors will assist students in understanding concepts and completing assignments but will not provide solutions or assistance that violates academic integrity policies.</p>
+  
+    <h2>7. Feedback and Improvement:</h2>
+    <p>We welcome feedback from students regarding their tutoring experience and strive to continually improve our services. Students are encouraged to provide constructive feedback to help us better meet their academic needs and goals.</p>
+  
+    <h2>8. Confidentiality:</h2>
+    <p>We respect the privacy and confidentiality of our students and their academic information. All tutoring sessions and communications will be kept confidential unless otherwise required by law or agreed upon by the student.</p>
+  
+    <h2>9. Cancellation and Refund Policy:</h2>
+    <p>Students may cancel a tutoring session without penalty if done at least 24 hours in advance. No-shows or cancellations made less than 24 hours before the scheduled session may be subject to a cancellation fee. Refunds may be provided in certain circumstances, such as if the tutor cancels the session or if there are technical issues preventing the session from taking place.</p>
+  
+    <h2>10. Contact Information:</h2>
+    <p>For inquiries, scheduling, or any concerns regarding tutoring services, please contact us at <a href="mailto:info.learniq@gmail.com">info.learniq@gmail.com</a>.</p>
+    <p><a href="tel:+27634414863"><i class='bx bxs-phone-call'></i></a>&dot;&dot;<a href="#"><i class='bx bxl-whatsapp-square'></i></a>&dot;&dot; <a href="#"><i class='bx bxl-facebook-circle'></i></a></p>
+    .</p>
+  
+    <h2>11. Amendments:</h2>
+    <p>This policy may be amended or updated from time to time, and any changes will be communicated to students in advance. By scheduling a tutoring session, students acknowledge that they have read, understood, and agree to abide by the terms and conditions outlined in this policy.</p>
+  </div>
+  </head>
+  <body>
+  <div class="policy" id="hiddenText2" >
+      <h1>Privacy Policy</h1>
+      <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+      <a class="ink" href="#" onclick="toggleText2()"><i class='bx bx-x'></i>Close</a>
+      <h2>Information We Collect</h2>
+      <p>We may collect personal information such as name, email address, and phone number when you interact with our website.</p>
+      
+      <h2>How We Use Your Information</h2>
+      <p>We use the information collected to improve our services, personalize your experience, and communicate with you.</p>
+      
+      <h2>Information Sharing</h2>
+      <p>We do not sell, trade, or otherwise transfer your personal information to third parties without your consent.</p>
+      
+      <h2>Security</h2>
+      <p>We implement security measures to protect your personal information from unauthorized access or disclosure.</p>
+      
+      <h2>Changes to This Privacy Policy</h2>
+      <p>We reserve the right to update or change our privacy policy at any time. Any changes will be posted on this page.</p>
+      
+      <h2>Contact Us</h2>
+      <p>If you have any questions or concerns about our privacy policy, please contact us at <a href="mailto:info.learniq@gmail.com">info.learniq@gmail.com</a>.</p>
+      <p><a href="tel:+27634414863"><i class='bx bxs-phone-call'></i></a>&dot;&dot;<a href="#"><i class='bx bxl-whatsapp-square'></i></a>&dot;&dot; <a href="#"><i class='bx bxl-facebook-circle'></i></a></p>
+      
+  </div>
+  </head>
+  <body>
+  <div class="policy" id="hiddenText3">
+      <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+      <h1>Terms of Use</h1>
+      <a class="ink" href="#" onclick="toggleText3()">Close</a>
+      <h2>Acceptance of Terms</h2>
+      <p>By accessing or using this website, you agree to be bound by these terms and conditions.</p>
+      
+      <h2>Use of Content</h2>
+      <p>All content provided on this website is for informational purposes only. You may not reproduce, modify, or distribute any part of this website without prior written consent.</p>
+      
+      <h2>Privacy Policy</h2>
+      <p>Your use of this website is also subject to our Privacy Policy.</p>
+      
+      <h2>Disclaimer of Warranties</h2>
+      <p>This website is provided "as is" without any representations or warranties, express or implied. We make no representations or warranties in relation to this website or the information and materials provided on this website.</p>
+      
+      <h2>Limitation of Liability</h2>
+      <p>We will not be liable to you in relation to the contents of, or use of, or otherwise in connection with, this website for any indirect, special, or consequential loss.</p>
+      
+      <h2>Changes to Terms</h2>
+      <p>We reserve the right to revise these terms of use at any time without notice. By using this website, you are agreeing to be bound by the current version of these terms of use.</p>
+      
+      <h2>Contact Us</h2>
+      <p>If you have any questions or concerns about our privacy policy, please contact us at <a href="mailto:info.learniq@gmail.com">info.learniq@gmail.com</a>.</p>
+      <p> OR <a href="tel:+27634414863"> Call</a> </p>
+  
+  </div>
+  </div>
+  <script>
+      function toggleText() {
+    var hiddenText = document.getElementById("hiddenText");
+    hiddenText.classList.toggle("visible");
+  }
+  function toggleText2() {
+    var hiddenText = document.getElementById("hiddenText2");
+    hiddenText.classList.toggle("visible");
+  }
+  function toggleText3() {
+    var hiddenText = document.getElementById("hiddenText3");
+    hiddenText.classList.toggle("visible");
+  }
+  </script>
 </body>
 
 </html>
